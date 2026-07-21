@@ -1,35 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>SBB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBB ❤️</title>
+
 <style>
+
 body{
-    font-family: Arial, sans-serif;
-    background:#eef5ff;
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#4f8cff,#c7dcff);
+    min-height:100vh;
     text-align:center;
-    padding:40px;
+    padding:30px;
+}
+
+h1{
+    color:white;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:white;
+    font-size:18px;
+    margin-bottom:40px;
 }
 
 #content{
     display:none;
 }
 
+input{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    width:220px;
+    font-size:16px;
+}
+
 button{
-    padding:10px 20px;
+    padding:12px 25px;
+    font-size:16px;
     background:#005ca9;
     color:white;
     border:none;
-    border-radius:8px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.message{
-    background:white;
-    max-width:600px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:10px;
+button:hover{
+    background:#004587;
 }
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    width:4px;
+    background:white;
+    top:0;
+    bottom:0;
+    transform:translateX(-50%);
+}
+
+.entry{
+    position:relative;
+    margin:40px 0;
+}
+
+.entry::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:20px;
+    width:18px;
+    height:18px;
+    background:#005ca9;
+    border:4px solid white;
+    border-radius:50%;
+    transform:translateX(-50%);
+    z-index:2;
+}
+
+.date{
+    color:white;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.card{
+    background:white;
+    width:40%;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    line-height:1.6;
+}
+
+.entry:nth-child(odd) .card{
+    margin-right:auto;
+}
+
+.entry:nth-child(even) .card{
+    margin-left:auto;
+}
+
+@media(max-width:768px){
+
+.timeline::before{
+    left:20px;
+}
+
+.entry::before{
+    left:20px;
+}
+
+.card{
+    width:calc(100% - 60px);
+    margin-left:50px !important;
+}
+
+.date{
+    text-align:left;
+    margin-left:50px;
+}
+
+}
+
 </style>
 </head>
 
@@ -37,87 +142,43 @@ button{
 
 <div id="login">
 
-<h1>SBB</h1>
+    <h1>SBB ❤️</h1>
 
-<p>Voer de geheime code in</p>
+    <p style="color:white;">
+        Voer de geheime code in
+    </p>
 
-<input type="password" id="code">
+    <input type="password" id="code">
 
-<br><br>
+    <br><br>
 
-<button onclick="openSite()">Openen</button>
+    <button onclick="openSite()">Openen</button>
 
 </div>
 
 <div id="content">
 
-<h1>SBB</h1>
+    <h1>❤️ Ons Verhaal ❤️</h1>
 
-<div class="message">
-<h3>Hopeloos verliefd sinds 5 januari 2026</h3>
-<p>Welkom op ONZE pagina </p>
-</div>
-
-<div class="message">
-<h3>18 juli 2026</h3>
-<p>
-Als je dit leest, wil ik dat je weet dat ik aan je denk.
-Waar je ook bent, je bent belangrijk voor mij. ❤️
-</p>
-</div>
-
-
-<div class="message">
-<h3>19 juli 2026</h3>
-<p>I'm falling
-In all the good times, I find myself longing for change
-And in the bad times, I fear myself
-
-I'm off the deep end, watch as I dive in
-I'll never meet the ground
-Crash through the surface, where they can't hurt us
-We're far from the shallow now.</p>
-</div>
-
-
-<div class="message">
-    <h3>20 juli 2026</h3>
-    <p>
-        En daar was je dan, even maar... net lang genoeg om mijn dag beter te maken en net kort genoeg om ervoor te zorgen dat ik je nu alweer mis.
-        Ik had je vandaag graag wat langer geleend van de wereld. Dat anderhalf uur was veel te leuk om je daarna alweer te moeten laten gaan.
-        Maar goed... dat geeft me tenminste een excuus om snel weer naar je uit te kijken. 😘✨
+    <p class="subtitle">
+        Hopeloos verliefd sinds 5 januari 2026
     </p>
-</div>
-  
 
-<div class="message">
-    <h3>21 juli 2026</h3>
-    <p>
-        Mijn liefste, ook al hebben we elkaar vandaag alleen via een scherm gehoord, toch voelde je dichtbij.
-        Het blijft bijzonder hoe een paar woorden van jou mijn dag meteen mooier maken.
-        Natuurlijk had ik je liever vastgehouden dan een berichtje gestuurd, maar ik ben dankbaar voor elk moment dat ik iets van je hoor.
-        Jij blijft mijn favoriete deel van elke dag. 💕😘
-        Ik mis je, maar ik draag je de hele dag met me mee, in elke glimlach en in elke gedachte. ❤️
-    </p>
-</div>
+    <div class="timeline">
 
-    
-<script>
-function openSite(){
+        <div class="entry">
+            <div class="date">18 juli 2026</div>
+            <div class="card">
+                Als je dit leest, wil ik dat je weet dat ik aan je denk.
+                Waar je ook bent, je bent belangrijk voor mij. ❤️
+            </div>
+        </div>
 
-if(document.getElementById("code").value==="050126"){
-
-document.getElementById("login").style.display="none";
-document.getElementById("content").style.display="block";
-
-}else{
-
-alert("Verkeerde code");
-
-}
-
-}
-</script>
-
-</body>
-</html>
+        <div class="entry">
+            <div class="date">19 juli 2026</div>
+            <div class="card">
+                I'm falling<br><br>
+                In all the good times, I find myself longing for change
+                And in the bad times, I fear myself
+                <br><br>
+                I'm off the deep end, watch as I dive in
